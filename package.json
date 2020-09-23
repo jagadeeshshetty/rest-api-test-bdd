@@ -1,0 +1,24 @@
+{
+  "name": "rest-api-test-automation",
+  "version": "1.0.0",
+  "description": "REST API Test Automation Framework using BDD with JS and Axios lib.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"RUNNING API TEST\" && ./node_modules/.bin/cucumber-js test/features/* -f json:test/report/cucumber_report.json && node index.js",
+    "test_win": "echo \"RUNNING API TEST\" && node_modules\\.bin\\cucumber-js test/features/* -f json:test/report/cucumber_report.json && node index.js",
+    "test:tag": "echo \"RUNNING API TEST\" && ./node_modules/.bin/cucumber-js --tags @debug test/features/* -f json:test/report/cucumber_report.json && node index.js",
+    "debug": "node --inspect=1337 --debug-brk --nolazy node_modules/cucumber/bin/cucumber-js --tags @debug --format json:test/report/cucumber_report.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cucumber": "^6.0.5",
+    "cucumber-html-reporter": "^5.2.0",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "axios": "^0.20.0",
+    "jsonschema": "^1.2.6"
+  }
+}

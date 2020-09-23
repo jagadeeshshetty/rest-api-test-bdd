@@ -1,0 +1,2632 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cucumber Feature Report</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style type="text/css">
+      .panel-heading {
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+    .pull-right-lg {
+        float: left;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .pull-right-lg {
+        float: right;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .pull-right-lg {
+        float: right;
+    }
+}
+
+@media (min-width: 1200px) {
+    .pull-right-lg {
+        float: right;
+    }
+}
+
+.left {
+    float: left;
+}
+
+.metadata {
+    overflow: auto;
+    letter-spacing: 0.2px;
+    border-color: white;
+    line-height: 1.6;
+    color: #4d4d4d;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    padding-bottom: 3px;
+}
+
+.panel-heading a {
+    padding: 10px 15px;
+    display: block;
+    position: relative;
+    text-decoration: none;
+}
+
+.panel-heading i.glyphicon-chevron-down {
+    display: none;
+}
+
+.panel-heading i.glyphicon-chevron-right {
+    display: inline-block;
+}
+
+.panel-heading.open i.glyphicon-chevron-down {
+    display: inline-block;
+}
+
+.panel-heading.open i.glyphicon-chevron-right {
+    display: none;
+}
+
+.generated-on {
+    text-align: right;
+    padding-bottom: 10px;
+}
+
+.panel-title b {
+    padding-right: 10px;
+}
+
+.panel-heading .label-container {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.panel-heading .label-container label {
+    margin-left: 5px;
+    padding: 5px;
+}
+
+.navbar .label-container {
+    position: absolute;
+    right: 10px;
+    top: 14px;
+}
+
+.navbar {
+    margin-bottom: 10px;
+}
+
+.navbar .label {
+    font-size: 20px;
+}
+
+.navbar .project-name {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    margin-left: -100px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tags {
+    margin-left: 18px;
+    margin-right: 20px;
+    padding-top: 5px;
+    margin-bottom: -4px;
+}
+
+.tag {
+    font-size: 13px;
+    color: #696969;
+    letter-spacing: 0.3px;
+    font-weight: bold;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
+
+.chart {
+    padding-bottom: 15px;
+}
+
+div.chart div div svg rect {
+    fill: #f5f5f5;
+}
+
+.arguments {
+    margin-left: 30px;
+    margin-top: 1em;
+    margin-bottom: 15px;
+}
+
+#directory {
+    background-color: #f0f0f0;
+}
+
+.screenshot {
+    padding: 2% 0 2% 0;
+}
+
+.description {
+    background-color: white;
+    border-color: white;
+    line-height: 1.6;
+    color: #6f6f6f;
+    font-weight: 400;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    padding: 0.1em 0.5em 1.2em 1.5em
+}
+
+#scenario-description {
+    padding-bottom: 1em;
+    padding-left: 0.2em;
+}
+
+.scrollBar {
+    overflow-x: scroll;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #f5f5f5;
+    color: black;
+}
+
+.info {
+    background-color: #fbfbfb;
+}
+
+pre {
+    display: block;
+    padding: 10px;
+    margin-top: 1em;
+    margin-right: 3em;
+    font-size: 13px;
+    line-height: 1.42857143;
+    word-break: break-all;
+    word-wrap: break-word;
+    color: #333;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.step-duration {
+    float: right;
+    color: #BDBDBD;
+}
+
+.footer-div {
+    text-align: right;
+    vertical-align: middle;
+    height: 3.5%;
+    width: 100%;
+}
+
+.footer-container {
+    margin-right: 10px;
+    margin-top: 5px;
+    width: 18%;
+    z-index: 10;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    text-align: center;
+    background-color: transparent;
+}
+
+.show-modal:hover {
+    background-color: #f0f0f0;
+}
+
+.footer-link {
+    font-size: 13px;
+    float: right;
+}
+
+.footer-link:hover {
+    color: darkgray;
+}
+
+.steps {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: -4px;
+}
+
+.all-features {
+    padding-top: 0.6em;
+}
+
+.keyword {
+    color: #616161;
+}
+
+.feature-passed {
+    display: block;
+}
+
+.feature-failed{
+    display: block;
+}
+
+    </style>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+        
+          <a class="navbar-brand">Cucumberjs Report</a>
+          <div class="project-name visible-md visible-lg">REST API TEST AUTOMATION</div>
+          <div class="label-container">
+            <span class="label label-success" onclick="toggle('.feature-passed')" title=scenarios>Passed: 6</span>
+            <span class="label label-danger" onclick="toggle('.feature-failed')" title=scenarios>Failed: 0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="generated-on">Wed Sep 23 2020 08:57:06 GMT+0530 (India Standard Time)</div>
+
+      <div class="row">
+        <div class="chart col-lg-6 col-md-6" id="piechart_features"></div>
+        <div class="chart col-lg-6 col-md-6" id="piechart_scenarios"></div>
+      </div>
+
+      
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#logOutput">
+              <i class="glyphicon glyphicon-chevron-right"></i>
+              <i class="glyphicon glyphicon-chevron-down"></i>
+              <b>Metadata</b>
+            </a>
+          </h4>
+        </div>
+        <div id="logOutput" class="panel-collapse collapse">
+          <div class="panel-body">
+            <div class="row">
+              
+             
+              
+              
+              <div class="clearfix metadata col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <div class=pull-left>
+                    <strong> App Version: </strong>0.1.0
+                  </div>
+              </div>
+              
+              
+              
+              <div class="clearfix metadata col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <div class=pull-right-lg>
+                    <strong> Automation Framework Version: </strong>0.1.0
+                  </div>
+              </div>
+              
+              
+              
+              <div class="clearfix metadata col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <div class=pull-left>
+                    <strong> Test Environment: </strong>TEST
+                  </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      
+
+
+<div class="row" xmlns="http://www.w3.org/1999/html">
+
+
+<div class="feature-passed">
+
+    <div class="col-lg-6 col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    
+                    <div class="tags"> <span class="tag">@testDELETEService</span>
+                        
+                    </div>
+                    
+                    <a data-toggle="collapse" href="#collapseFeature________________________62af1d09-8e07-415f-91f9-fdf0d5f4dfde">
+                        <i class="glyphicon glyphicon-chevron-right"></i>
+                        <i class="glyphicon glyphicon-chevron-down"></i>
+                        <b>Feature:</b>DELETE service
+                        <span class="label-container">
+              <span class="label label-success"
+                                                         title="1 Scenarios Passed">1</span>
+              
+              
+              
+              
+              
+                        </span>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseFeature________________________62af1d09-8e07-415f-91f9-fdf0d5f4dfde" class="panel-collapse collapse">
+                <div class="panel-body">
+                    
+                    <div class="description">    Validate the DELETE service endpoints.</div>
+                    
+                    
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                
+                                
+                                <div class="tags"> <span class="tag"> @deletePostWithID</span>
+                                     <span class="tag"> @debug</span>
+                                    
+                                </div>
+                                
+                                <a data-toggle="collapse" href="#collapseScenario________________________f9393882-48c9-4a94-9f46-5b878755fd26">
+                                    <div>
+
+                                        <div style="padding-right: 30px">
+                                            <i class="glyphicon glyphicon-chevron-right"></i>
+                                            <i class="glyphicon glyphicon-chevron-down"></i>
+                                            <b>Scenario:</b>Validate the DELETE response.
+                                        </div>
+                                        <div>
+                            <span class="label-container">
+                              <span class="label label-success"
+                                                               title="4 Steps Passed">4</span>
+                              
+                              
+                              
+                              
+                              
+                            </span>
+                                        </div>
+                                    </div>
+                                    <div><small><i></i></small></div>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseScenario________________________f9393882-48c9-4a94-9f46-5b878755fd26"
+                             class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div></div>
+                                
+                                
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span> a valid &quot;jsonplaceholder&quot; url</span>
+                            
+                          
+                              <span class="step-duration">
+                               1ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+                                    <a href="#info0_01"
+                                       data-toggle="collapse" class="show-info toggle">Show Info +</a>
+                                    <div id="info0_01"
+                                         class="collapse"
+                                         data-toggle="modal"
+                                         style="cursor: pointer"
+                                         data-target="#info-modal-0_01">
+                                        <pre class="info show-modal">https://jsonplaceholder.typicode.com</pre>
+                                    </div>
+
+                                <div class="modal fade" id="info-modal-0_01" tabindex="-1" role="dialog"
+                                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <h4 class="modal-title" id="info-modal-title">
+                                                    Info
+                                                </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>
+                                                    <pre>https://jsonplaceholder.typicode.com</pre>
+                                                </h5>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> i delete the &quot;posts&quot; endpoint with &quot;1&quot; ID</span>
+                            
+                          
+                              <span class="step-duration">
+                               974ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+                                    <a href="#info0_02"
+                                       data-toggle="collapse" class="show-info toggle">Show Info +</a>
+                                    <div id="info0_02"
+                                         class="collapse"
+                                         data-toggle="modal"
+                                         style="cursor: pointer"
+                                         data-target="#info-modal-0_02">
+                                        <pre class="info show-modal">https://jsonplaceholder.typicode.com/posts/1</pre>
+                                    </div>
+
+                                <div class="modal fade" id="info-modal-0_02" tabindex="-1" role="dialog"
+                                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <h4 class="modal-title" id="info-modal-title">
+                                                    Info
+                                                </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>
+                                                    <pre>https://jsonplaceholder.typicode.com/posts/1</pre>
+                                                </h5>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> i should get &quot;200&quot; response status code</span>
+                            
+                          
+                              <span class="step-duration">
+                               1ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> the response body should be null</span>
+                            
+                          
+                              <span class="step-duration">
+                               < 1ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+                                    <a href="#info0_04"
+                                       data-toggle="collapse" class="show-info toggle">Show Info +</a>
+                                    <div id="info0_04"
+                                         class="collapse"
+                                         data-toggle="modal"
+                                         style="cursor: pointer"
+                                         data-target="#info-modal-0_04">
+                                        <pre class="info show-modal">Body:
+{}</pre>
+                                    </div>
+
+                                <div class="modal fade" id="info-modal-0_04" tabindex="-1" role="dialog"
+                                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <h4 class="modal-title" id="info-modal-title">
+                                                    Info
+                                                </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>
+                                                    <pre>Body:
+{}</pre>
+                                                </h5>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+
+
+
+<div class="feature-passed">
+
+    <div class="col-lg-6 col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    
+                    <div class="tags"> <span class="tag">@testGETService</span>
+                        
+                    </div>
+                    
+                    <a data-toggle="collapse" href="#collapseFeature________________________c1b5af55-c0b8-4ac5-9d6c-6811e1aed2e0">
+                        <i class="glyphicon glyphicon-chevron-right"></i>
+                        <i class="glyphicon glyphicon-chevron-down"></i>
+                        <b>Feature:</b>GET service
+                        <span class="label-container">
+              <span class="label label-success"
+                                                         title="3 Scenarios Passed">3</span>
+              
+              
+              
+              
+              
+                        </span>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseFeature________________________c1b5af55-c0b8-4ac5-9d6c-6811e1aed2e0" class="panel-collapse collapse">
+                <div class="panel-body">
+                    
+                    <div class="description">    Validate the GET service endpoints.</div>
+                    
+                    
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                
+                                
+                                <div class="tags"> <span class="tag"> @getServicePosts</span>
+                                    
+                                </div>
+                                
+                                <a data-toggle="collapse" href="#collapseScenario________________________210c2e13-02c3-4ed1-97c1-1512a7b0d4d3">
+                                    <div>
+
+                                        <div style="padding-right: 30px">
+                                            <i class="glyphicon glyphicon-chevron-right"></i>
+                                            <i class="glyphicon glyphicon-chevron-down"></i>
+                                            <b>Scenario:</b>Validate the GET Posts response.
+                                        </div>
+                                        <div>
+                            <span class="label-container">
+                              <span class="label label-success"
+                                                               title="4 Steps Passed">4</span>
+                              
+                              
+                              
+                              
+                              
+                            </span>
+                                        </div>
+                                    </div>
+                                    <div><small><i></i></small></div>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseScenario________________________210c2e13-02c3-4ed1-97c1-1512a7b0d4d3"
+                             class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div></div>
+                                
+                                
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span> a valid &quot;jsonplaceholder&quot; url</span>
+                            
+                          
+                              <span class="step-duration">
+                               < 1ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+                                    <a href="#info1_01"
+                                       data-toggle="collapse" class="show-info toggle">Show Info +</a>
+                                    <div id="info1_01"
+                                         class="collapse"
+                                         data-toggle="modal"
+                                         style="cursor: pointer"
+                                         data-target="#info-modal-1_01">
+                                        <pre class="info show-modal">https://jsonplaceholder.typicode.com</pre>
+                                    </div>
+
+                                <div class="modal fade" id="info-modal-1_01" tabindex="-1" role="dialog"
+                                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <h4 class="modal-title" id="info-modal-title">
+                                                    Info
+                                                </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>
+                                                    <pre>https://jsonplaceholder.typicode.com</pre>
+                                                </h5>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> i request &quot;posts&quot; endpoint</span>
+                            
+                          
+                              <span class="step-duration">
+                               147ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+                                    <a href="#info1_02"
+                                       data-toggle="collapse" class="show-info toggle">Show Info +</a>
+                                    <div id="info1_02"
+                                         class="collapse"
+                                         data-toggle="modal"
+                                         style="cursor: pointer"
+                                         data-target="#info-modal-1_02">
+                                        <pre class="info show-modal">https://jsonplaceholder.typicode.com/posts</pre>
+                                    </div>
+
+                                <div class="modal fade" id="info-modal-1_02" tabindex="-1" role="dialog"
+                                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <h4 class="modal-title" id="info-modal-title">
+                                                    Info
+                                                </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>
+                                                    <pre>https://jsonplaceholder.typicode.com/posts</pre>
+                                                </h5>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> i should get &quot;200&quot; response status code</span>
+                            
+                          
+                              <span class="step-duration">
+                               1ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> the &quot;POSTS&quot; schema should be proper</span>
+                            
+                          
+                              <span class="step-duration">
+                               3ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                
+                                
+                                <div class="tags"> <span class="tag"> @getServicePostsWithID</span>
+                                    
+                                </div>
+                                
+                                <a data-toggle="collapse" href="#collapseScenario________________________8fb161db-04f6-486c-b605-15837b565b1e">
+                                    <div>
+
+                                        <div style="padding-right: 30px">
+                                            <i class="glyphicon glyphicon-chevron-right"></i>
+                                            <i class="glyphicon glyphicon-chevron-down"></i>
+                                            <b>Scenario:</b>Validate the GET Posts response with ID.
+                                        </div>
+                                        <div>
+                            <span class="label-container">
+                              <span class="label label-success"
+                                                               title="6 Steps Passed">6</span>
+                              
+                              
+                              
+                              
+                              
+                            </span>
+                                        </div>
+                                    </div>
+                                    <div><small><i></i></small></div>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseScenario________________________8fb161db-04f6-486c-b605-15837b565b1e"
+                             class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div></div>
+                                
+                                
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span> a valid &quot;jsonplaceholder&quot; url</span>
+                            
+                          
+                              <span class="step-duration">
+                               < 1ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+                                    <a href="#info1_11"
+                                       data-toggle="collapse" class="show-info toggle">Show Info +</a>
+                                    <div id="info1_11"
+                                         class="collapse"
+                                         data-toggle="modal"
+                                         style="cursor: pointer"
+                                         data-target="#info-modal-1_11">
+                                        <pre class="info show-modal">https://jsonplaceholder.typicode.com</pre>
+                                    </div>
+
+                                <div class="modal fade" id="info-modal-1_11" tabindex="-1" role="dialog"
+                                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <h4 class="modal-title" id="info-modal-title">
+                                                    Info
+                                                </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>
+                                                    <pre>https://jsonplaceholder.typicode.com</pre>
+                                                </h5>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> i request &quot;posts&quot; endpoint with &quot;1&quot; ID</span>
+                            
+                          
+                              <span class="step-duration">
+                               142ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+                                    <a href="#info1_12"
+                                       data-toggle="collapse" class="show-info toggle">Show Info +</a>
+                                    <div id="info1_12"
+                                         class="collapse"
+                                         data-toggle="modal"
+                                         style="cursor: pointer"
+                                         data-target="#info-modal-1_12">
+                                        <pre class="info show-modal">https://jsonplaceholder.typicode.com/posts/1</pre>
+                                    </div>
+
+                                <div class="modal fade" id="info-modal-1_12" tabindex="-1" role="dialog"
+                                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <h4 class="modal-title" id="info-modal-title">
+                                                    Info
+                                                </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>
+                                                    <pre>https://jsonplaceholder.typicode.com/posts/1</pre>
+                                                </h5>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> i should get &quot;200&quot; response status code</span>
+                            
+                          
+                              <span class="step-duration">
+                               < 1ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> the &quot;POSTS_WITH_ID&quot; schema should be proper</span>
+                            
+                          
+                              <span class="step-duration">
+                               1ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> the response ID should be identical to request ID</span>
+                            
+                          
+                              <span class="step-duration">
+                               < 1ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> the response should contain only one record</span>
+                            
+                          
+                              <span class="step-duration">
+                               < 1ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                
+                                
+                                <div class="tags"> <span class="tag"> @getServicePostsInvalid</span>
+                                    
+                                </div>
+                                
+                                <a data-toggle="collapse" href="#collapseScenario________________________cae8b4ea-9203-46ee-ad7f-75ee348386eb">
+                                    <div>
+
+                                        <div style="padding-right: 30px">
+                                            <i class="glyphicon glyphicon-chevron-right"></i>
+                                            <i class="glyphicon glyphicon-chevron-down"></i>
+                                            <b>Scenario:</b>Validate the GET Posts response with invalid post.
+                                        </div>
+                                        <div>
+                            <span class="label-container">
+                              <span class="label label-success"
+                                                               title="3 Steps Passed">3</span>
+                              
+                              
+                              
+                              
+                              
+                            </span>
+                                        </div>
+                                    </div>
+                                    <div><small><i></i></small></div>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseScenario________________________cae8b4ea-9203-46ee-ad7f-75ee348386eb"
+                             class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div></div>
+                                
+                                
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span> a valid &quot;jsonplaceholder&quot; url</span>
+                            
+                          
+                              <span class="step-duration">
+                               < 1ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+                                    <a href="#info1_21"
+                                       data-toggle="collapse" class="show-info toggle">Show Info +</a>
+                                    <div id="info1_21"
+                                         class="collapse"
+                                         data-toggle="modal"
+                                         style="cursor: pointer"
+                                         data-target="#info-modal-1_21">
+                                        <pre class="info show-modal">https://jsonplaceholder.typicode.com</pre>
+                                    </div>
+
+                                <div class="modal fade" id="info-modal-1_21" tabindex="-1" role="dialog"
+                                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <h4 class="modal-title" id="info-modal-title">
+                                                    Info
+                                                </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>
+                                                    <pre>https://jsonplaceholder.typicode.com</pre>
+                                                </h5>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> i request &quot;invalidposts&quot; endpoint</span>
+                            
+                          
+                              <span class="step-duration">
+                               851ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+                                    <a href="#info1_22"
+                                       data-toggle="collapse" class="show-info toggle">Show Info +</a>
+                                    <div id="info1_22"
+                                         class="collapse"
+                                         data-toggle="modal"
+                                         style="cursor: pointer"
+                                         data-target="#info-modal-1_22">
+                                        <pre class="info show-modal">https://jsonplaceholder.typicode.com/invalidposts</pre>
+                                    </div>
+
+                                <div class="modal fade" id="info-modal-1_22" tabindex="-1" role="dialog"
+                                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <h4 class="modal-title" id="info-modal-title">
+                                                    Info
+                                                </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>
+                                                    <pre>https://jsonplaceholder.typicode.com/invalidposts</pre>
+                                                </h5>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> i should get &quot;404&quot; response status code</span>
+                            
+                          
+                              <span class="step-duration">
+                               1ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+                                    <a href="#info1_23"
+                                       data-toggle="collapse" class="show-info toggle">Show Info +</a>
+                                    <div id="info1_23"
+                                         class="collapse"
+                                         data-toggle="modal"
+                                         style="cursor: pointer"
+                                         data-target="#info-modal-1_23">
+                                        <pre class="info show-modal">✨ REQUEST ✨
+<br>Headers: {"date":"Wed, 23 Sep 2020 03:27:04 GMT","content-type":"application/json; charset=utf-8","content-length":"2","connection":"close","set-cookie":["__cfduid=dd684f4d4acb1174d8222906131f443b01600831624; expires=Fri, 23-Oct-20 03:27:04 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax"],"x-powered-by":"Express","x-ratelimit-limit":"1000","x-ratelimit-remaining":"998","x-ratelimit-reset":"1600831639","vary":"Origin, Accept-Encoding","access-control-allow-credentials":"true","cache-control":"max-age=43200","pragma":"no-cache","expires":"-1","x-content-type-options":"nosniff","etag":"W/\"2-vyGp6PvFo4RvsFtPoIWeCReyIC8\"","via":"1.1 vegur","cf-cache-status":"EXPIRED","cf-request-id":"055a992b3f0000df361d86e200000001","expect-ct":"max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"","server":"cloudflare","cf-ray":"5d712af1fffbdf36-BOM"}<br>
+✨ RESPONSE ✨
+<br>Status: 404 Not Found<br>Body: {}</pre>
+                                    </div>
+
+                                <div class="modal fade" id="info-modal-1_23" tabindex="-1" role="dialog"
+                                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <h4 class="modal-title" id="info-modal-title">
+                                                    Info
+                                                </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>
+                                                    <pre>✨ REQUEST ✨
+<br>Headers: {"date":"Wed, 23 Sep 2020 03:27:04 GMT","content-type":"application/json; charset=utf-8","content-length":"2","connection":"close","set-cookie":["__cfduid=dd684f4d4acb1174d8222906131f443b01600831624; expires=Fri, 23-Oct-20 03:27:04 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax"],"x-powered-by":"Express","x-ratelimit-limit":"1000","x-ratelimit-remaining":"998","x-ratelimit-reset":"1600831639","vary":"Origin, Accept-Encoding","access-control-allow-credentials":"true","cache-control":"max-age=43200","pragma":"no-cache","expires":"-1","x-content-type-options":"nosniff","etag":"W/\"2-vyGp6PvFo4RvsFtPoIWeCReyIC8\"","via":"1.1 vegur","cf-cache-status":"EXPIRED","cf-request-id":"055a992b3f0000df361d86e200000001","expect-ct":"max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"","server":"cloudflare","cf-ray":"5d712af1fffbdf36-BOM"}<br>
+✨ RESPONSE ✨
+<br>Status: 404 Not Found<br>Body: {}</pre>
+                                                </h5>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+</div>
+
+
+
+<div class="row" xmlns="http://www.w3.org/1999/html">
+
+
+<div class="feature-passed">
+
+    <div class="col-lg-6 col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    
+                    <div class="tags"> <span class="tag">@testPOSTService</span>
+                        
+                    </div>
+                    
+                    <a data-toggle="collapse" href="#collapseFeature________________________374ebb0c-9567-4a39-94f4-9795207315ea">
+                        <i class="glyphicon glyphicon-chevron-right"></i>
+                        <i class="glyphicon glyphicon-chevron-down"></i>
+                        <b>Feature:</b>POST service
+                        <span class="label-container">
+              <span class="label label-success"
+                                                         title="1 Scenarios Passed">1</span>
+              
+              
+              
+              
+              
+                        </span>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseFeature________________________374ebb0c-9567-4a39-94f4-9795207315ea" class="panel-collapse collapse">
+                <div class="panel-body">
+                    
+                    <div class="description">    Validate the POST service endpoints.</div>
+                    
+                    
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                
+                                
+                                <div class="tags"> <span class="tag"> @postServiceWithStringBody</span>
+                                    
+                                </div>
+                                
+                                <a data-toggle="collapse" href="#collapseScenario________________________5caf4abb-1c62-44a7-a0d8-facf1fadc4ff">
+                                    <div>
+
+                                        <div style="padding-right: 30px">
+                                            <i class="glyphicon glyphicon-chevron-right"></i>
+                                            <i class="glyphicon glyphicon-chevron-down"></i>
+                                            <b>Scenario:</b>Validate the POST response.
+                                        </div>
+                                        <div>
+                            <span class="label-container">
+                              <span class="label label-success"
+                                                               title="5 Steps Passed">5</span>
+                              
+                              
+                              
+                              
+                              
+                            </span>
+                                        </div>
+                                    </div>
+                                    <div><small><i></i></small></div>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseScenario________________________5caf4abb-1c62-44a7-a0d8-facf1fadc4ff"
+                             class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div></div>
+                                
+                                
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span> a valid &quot;jsonplaceholder&quot; url</span>
+                            
+                          
+                              <span class="step-duration">
+                               < 1ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+                                    <a href="#info2_01"
+                                       data-toggle="collapse" class="show-info toggle">Show Info +</a>
+                                    <div id="info2_01"
+                                         class="collapse"
+                                         data-toggle="modal"
+                                         style="cursor: pointer"
+                                         data-target="#info-modal-2_01">
+                                        <pre class="info show-modal">https://jsonplaceholder.typicode.com</pre>
+                                    </div>
+
+                                <div class="modal fade" id="info-modal-2_01" tabindex="-1" role="dialog"
+                                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <h4 class="modal-title" id="info-modal-title">
+                                                    Info
+                                                </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>
+                                                    <pre>https://jsonplaceholder.typicode.com</pre>
+                                                </h5>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> i send POST request with &quot;posts&quot; endpoint and &quot;NEW_POST&quot; body</span>
+                            
+                          
+                              <span class="step-duration">
+                               653ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> i should get &quot;201&quot; response status code</span>
+                            
+                          
+                              <span class="step-duration">
+                               < 1ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+                                    <a href="#info2_03"
+                                       data-toggle="collapse" class="show-info toggle">Show Info +</a>
+                                    <div id="info2_03"
+                                         class="collapse"
+                                         data-toggle="modal"
+                                         style="cursor: pointer"
+                                         data-target="#info-modal-2_03">
+                                        <pre class="info show-modal">✨ REQUEST ✨
+<br>Headers: {"date":"Wed, 23 Sep 2020 03:27:05 GMT","content-type":"application/json; charset=utf-8","content-length":"65","connection":"close","set-cookie":["__cfduid=d5b15082ddc241e64414ff45a0697cad61600831624; expires=Fri, 23-Oct-20 03:27:04 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax"],"x-powered-by":"Express","x-ratelimit-limit":"1000","x-ratelimit-remaining":"997","x-ratelimit-reset":"1600831639","vary":"Origin, X-HTTP-Method-Override, Accept-Encoding","access-control-allow-credentials":"true","cache-control":"no-cache","pragma":"no-cache","expires":"-1","access-control-expose-headers":"Location","location":"http://jsonplaceholder.typicode.com/posts/101","x-content-type-options":"nosniff","etag":"W/\"41-GDNaWfnVU6RZhpLbye0veBaqcHA\"","via":"1.1 vegur","cf-cache-status":"DYNAMIC","cf-request-id":"055a992e950000e15ae2b9a200000001","expect-ct":"max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"","server":"cloudflare","cf-ray":"5d712af75957e15a-BOM"}<br>
+✨ RESPONSE ✨
+<br>Status: 201 Created<br>Body: {"title":"foo","body":"bar","userId":1,"id":101}</pre>
+                                    </div>
+
+                                <div class="modal fade" id="info-modal-2_03" tabindex="-1" role="dialog"
+                                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <h4 class="modal-title" id="info-modal-title">
+                                                    Info
+                                                </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>
+                                                    <pre>✨ REQUEST ✨
+<br>Headers: {"date":"Wed, 23 Sep 2020 03:27:05 GMT","content-type":"application/json; charset=utf-8","content-length":"65","connection":"close","set-cookie":["__cfduid=d5b15082ddc241e64414ff45a0697cad61600831624; expires=Fri, 23-Oct-20 03:27:04 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax"],"x-powered-by":"Express","x-ratelimit-limit":"1000","x-ratelimit-remaining":"997","x-ratelimit-reset":"1600831639","vary":"Origin, X-HTTP-Method-Override, Accept-Encoding","access-control-allow-credentials":"true","cache-control":"no-cache","pragma":"no-cache","expires":"-1","access-control-expose-headers":"Location","location":"http://jsonplaceholder.typicode.com/posts/101","x-content-type-options":"nosniff","etag":"W/\"41-GDNaWfnVU6RZhpLbye0veBaqcHA\"","via":"1.1 vegur","cf-cache-status":"DYNAMIC","cf-request-id":"055a992e950000e15ae2b9a200000001","expect-ct":"max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"","server":"cloudflare","cf-ray":"5d712af75957e15a-BOM"}<br>
+✨ RESPONSE ✨
+<br>Status: 201 Created<br>Body: {"title":"foo","body":"bar","userId":1,"id":101}</pre>
+                                                </h5>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> the &quot;CREATE_NEW_POST&quot; schema should be proper</span>
+                            
+                          
+                              <span class="step-duration">
+                               < 1ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> the response should contain valid ID</span>
+                            
+                          
+                              <span class="step-duration">
+                               1ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+                                    <a href="#info2_05"
+                                       data-toggle="collapse" class="show-info toggle">Show Info +</a>
+                                    <div id="info2_05"
+                                         class="collapse"
+                                         data-toggle="modal"
+                                         style="cursor: pointer"
+                                         data-target="#info-modal-2_05">
+                                        <pre class="info show-modal">Created/Updated ID: 101</pre>
+                                    </div>
+
+                                <div class="modal fade" id="info-modal-2_05" tabindex="-1" role="dialog"
+                                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <h4 class="modal-title" id="info-modal-title">
+                                                    Info
+                                                </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>
+                                                    <pre>Created/Updated ID: 101</pre>
+                                                </h5>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+
+
+
+<div class="feature-passed">
+
+    <div class="col-lg-6 col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    
+                    <div class="tags"> <span class="tag">@testPUTService</span>
+                        
+                    </div>
+                    
+                    <a data-toggle="collapse" href="#collapseFeature________________________2de6b424-e750-485c-893a-7a04c6d51eab">
+                        <i class="glyphicon glyphicon-chevron-right"></i>
+                        <i class="glyphicon glyphicon-chevron-down"></i>
+                        <b>Feature:</b>PUT service
+                        <span class="label-container">
+              <span class="label label-success"
+                                                         title="1 Scenarios Passed">1</span>
+              
+              
+              
+              
+              
+                        </span>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseFeature________________________2de6b424-e750-485c-893a-7a04c6d51eab" class="panel-collapse collapse">
+                <div class="panel-body">
+                    
+                    <div class="description">    Validate the PUT service endpoints.</div>
+                    
+                    
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                
+                                
+                                <div class="tags"> <span class="tag"> @putServiceUpdatePost</span>
+                                    
+                                </div>
+                                
+                                <a data-toggle="collapse" href="#collapseScenario________________________f1fab092-4c6b-4dce-954d-123b626d3ddb">
+                                    <div>
+
+                                        <div style="padding-right: 30px">
+                                            <i class="glyphicon glyphicon-chevron-right"></i>
+                                            <i class="glyphicon glyphicon-chevron-down"></i>
+                                            <b>Scenario:</b>Validate the PUT response.
+                                        </div>
+                                        <div>
+                            <span class="label-container">
+                              <span class="label label-success"
+                                                               title="5 Steps Passed">5</span>
+                              
+                              
+                              
+                              
+                              
+                            </span>
+                                        </div>
+                                    </div>
+                                    <div><small><i></i></small></div>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseScenario________________________f1fab092-4c6b-4dce-954d-123b626d3ddb"
+                             class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div></div>
+                                
+                                
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Given </span>
+                          <span> a valid &quot;jsonplaceholder&quot; url</span>
+                            
+                          
+                              <span class="step-duration">
+                               < 1ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+                                    <a href="#info3_01"
+                                       data-toggle="collapse" class="show-info toggle">Show Info +</a>
+                                    <div id="info3_01"
+                                         class="collapse"
+                                         data-toggle="modal"
+                                         style="cursor: pointer"
+                                         data-target="#info-modal-3_01">
+                                        <pre class="info show-modal">https://jsonplaceholder.typicode.com</pre>
+                                    </div>
+
+                                <div class="modal fade" id="info-modal-3_01" tabindex="-1" role="dialog"
+                                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <h4 class="modal-title" id="info-modal-title">
+                                                    Info
+                                                </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>
+                                                    <pre>https://jsonplaceholder.typicode.com</pre>
+                                                </h5>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">When </span>
+                          <span> i update the &quot;posts&quot; endpoint with &quot;1&quot; ID and &quot;UPDATE_POST&quot; body</span>
+                            
+                          
+                              <span class="step-duration">
+                               646ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+                                    <a href="#info3_02"
+                                       data-toggle="collapse" class="show-info toggle">Show Info +</a>
+                                    <div id="info3_02"
+                                         class="collapse"
+                                         data-toggle="modal"
+                                         style="cursor: pointer"
+                                         data-target="#info-modal-3_02">
+                                        <pre class="info show-modal">https://jsonplaceholder.typicode.com/posts/1</pre>
+                                    </div>
+
+                                <div class="modal fade" id="info-modal-3_02" tabindex="-1" role="dialog"
+                                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <h4 class="modal-title" id="info-modal-title">
+                                                    Info
+                                                </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>
+                                                    <pre>https://jsonplaceholder.typicode.com/posts/1</pre>
+                                                </h5>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">Then </span>
+                          <span> i should get &quot;200&quot; response status code</span>
+                            
+                          
+                              <span class="step-duration">
+                               5ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> the &quot;UPDATE_POST&quot; schema should be proper</span>
+                            
+                          
+                              <span class="step-duration">
+                               5ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                <p class="scenario-container">
+                                <div class="row steps">
+                                    
+                                    
+                                    <span class="label label-success" title="Success"><i
+                                            class="glyphicon glyphicon-ok"></i></span>
+                                    
+                                    
+                                    <span class="text">
+                        <span class="keyword highlight">And </span>
+                          <span> the response should contain valid ID</span>
+                            
+                          
+                              <span class="step-duration">
+                               1ms
+                              </span>
+                            
+                         
+                            
+                          
+                          <!-- Adding data table data-->
+                          
+                      </span>
+                                
+                                
+
+                                    
+
+                                    
+                                    <a href="#info3_05"
+                                       data-toggle="collapse" class="show-info toggle">Show Info +</a>
+                                    <div id="info3_05"
+                                         class="collapse"
+                                         data-toggle="modal"
+                                         style="cursor: pointer"
+                                         data-target="#info-modal-3_05">
+                                        <pre class="info show-modal">Created/Updated ID: 1</pre>
+                                    </div>
+
+                                <div class="modal fade" id="info-modal-3_05" tabindex="-1" role="dialog"
+                                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <h4 class="modal-title" id="info-modal-title">
+                                                    Info
+                                                </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h5>
+                                                    <pre>Created/Updated ID: 1</pre>
+                                                </h5>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                
+
+                                    
+
+                                    
+                                </div>
+                                </p>
+                                
+                                
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+</div>
+
+
+
+    </div>
+
+    <div class="navbar-fixed-bottom row-fluid footer-div ">
+      <div class="navbar-inner">
+        <div class="footer-container">
+          <a  target="_blank" href="https://www.npmjs.com/package/cucumber-html-reporter">
+            <div class="text-muted footer-link">
+              generated by @cucumber-html-reporter
+            </div>
+             </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load("visualization", "1", {packages: ["corechart"]});
+        google.setOnLoadCallback(function() {drawChart({
+                                                            "title" : "Features",
+                                                            "failed" : 0,
+                                                            "passed" : 4,
+                                                            "notdefined" : 0,
+                                                            "pending" : 0,
+                                                            "skipped" : 0,
+                                                            "ambiguous" : 0
+                                                        })
+                                            });
+        google.setOnLoadCallback(function() {drawChart({
+                                                            "title" : "Scenarios",
+                                                            "failed" : 0,
+                                                            "passed" : 6,
+                                                            "notdefined" : 0,
+                                                            "pending" : 0,
+                                                            "skipped" : 0,
+                                                            "ambiguous" : 0
+                                                        })
+                                            });
+    </script>
+    <script>
+      $(document).ready(function() {
+    $('.collapse').on('hide.bs.collapse', function(e) {
+        e.stopPropagation();
+        $(this).prev().removeClass('open');
+    }).on('show.bs.collapse', function(e) {
+        e.stopPropagation();
+        $(this).prev().addClass('open');
+    });
+
+    var $generated = $('.generated-on');
+
+    $generated.text('Generated ' + moment($generated.text()).fromNow());
+});
+
+function toggle(className) {
+  var x = $(className);
+  if ( x.css('display') === "none") {
+    x.css('display', 'block');
+  } else {
+    x.css('display', 'none');
+  }
+}
+
+      function drawChart(chartData) {
+    var data = google.visualization.arrayToDataTable([
+        ['Task', 'Cucumber Results'],
+        ['Passed', chartData.passed],
+        ['Failed', chartData.failed],
+        ['Pending', chartData.pending],
+        ['Undefined', chartData.notdefined],
+        ['Ambiguous', chartData.ambiguous],
+        ['Skipped', chartData.skipped]        
+    ]);
+
+    var total = chartData.passed + chartData.failed + (chartData.pending || 0) + (chartData.notdefined || 0) + (chartData.ambiguous || 0) + (chartData.skipped || 0);
+    var title;
+
+    if (total === 1) {
+        title = total + ' ' + chartData.title.slice(0, -1)
+    } else {
+        title = total + ' ' + chartData.title;
+    }
+
+    var options = {
+        width: '100%',
+        height: 240,
+        title: title,
+        is3D: true,
+        colors: ['#5cb85c', '#d9534f', '#999', '#5bc0de', '#428bca', '#f0ad4e'],
+        fontSize: '13',
+        fontName: '"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif',
+        slices: {
+            1: {offset: 0.4},
+            2: {offset: 0.4},
+            3: {offset: 0.4},
+            4: {offset: 0.4},
+            5: {offset: 0.4},
+            6: {offset: 0.4}
+        },
+        titleTextStyle: {
+            fontSize: '13',
+            color: '#5e5e5e'
+        }
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart_' + chartData.title.toLowerCase()));
+
+    function selectHandler() {
+      var selectedItem = chart.getSelection()[0];
+      if (selectedItem) {
+        var featureStatus = data.getValue(selectedItem.row, 0);
+        if (featureStatus === 'Passed'){
+            var x = $('.feature-passed');
+        }else{
+            var x = $('.feature-failed');
+        }
+        if (x && x.css('display') === "none") {
+          x.css('display', 'block');
+        } else {
+          x.css('display', 'none');
+        }
+      }
+    }
+    google.visualization.events.addListener(chart, 'select', selectHandler);
+
+    chart.draw(data, options);
+}
+
+      $('a.toggle').on('click', function(e) {
+    e.preventDefault();
+
+    if (!$(this).hasClass('collapse')) {
+        if ($(this).text() === 'Screenshot -') {
+            // $(this).text('Screenshot +');
+            $(this).next('a.screenshot').find('img').hide();
+        } else if($(this).text() === 'Screenshot +') {
+            // $(this).text('Screenshot -');
+            $(this).next('a.screenshot').find('img').show();
+        }
+    }
+
+    if ($(this).text().includes(' -')) {
+        $(this).text($(this).text().replace(' -', ' +'));
+    } else {
+        $(this).text($(this).text().replace(' +', ' -'));
+    }
+});
+
+    </script>
+  </body>
+</html>

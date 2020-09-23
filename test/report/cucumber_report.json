@@ -1,0 +1,795 @@
+[
+  {
+    "description": "    Validate the DELETE service endpoints.",
+    "keyword": "Feature",
+    "name": "DELETE service",
+    "line": 3,
+    "id": "delete-service",
+    "tags": [
+      {
+        "name": "@testDELETEService",
+        "line": 2
+      }
+    ],
+    "uri": "test/features/testDELETEService.feature",
+    "elements": [
+      {
+        "id": "delete-service;validate-the-delete-response.",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Validate the DELETE response.",
+        "tags": [
+          {
+            "name": "@testDELETEService",
+            "line": 2
+          },
+          {
+            "name": "@deletePostWithID",
+            "line": 6
+          },
+          {
+            "name": "@debug",
+            "line": 6
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "test/features/support/hooks.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "a valid \"jsonplaceholder\" url",
+            "match": {
+              "location": "test/features/step_definitions/stepdefs.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            },
+            "embeddings": [
+              {
+                "data": "https://jsonplaceholder.typicode.com",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "i delete the \"posts\" endpoint with \"1\" ID",
+            "match": {
+              "location": "test/features/step_definitions/stepdefs.js:85"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 974000000
+            },
+            "embeddings": [
+              {
+                "data": "https://jsonplaceholder.typicode.com/posts/1",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "i should get \"200\" response status code",
+            "match": {
+              "location": "test/features/step_definitions/stepdefs.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "the response body should be null",
+            "match": {
+              "location": "test/features/step_definitions/stepdefs.js:91"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            },
+            "embeddings": [
+              {
+                "data": "Body:\n{}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "test/features/support/hooks.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "    Validate the GET service endpoints.",
+    "keyword": "Feature",
+    "name": "GET service",
+    "line": 3,
+    "id": "get-service",
+    "tags": [
+      {
+        "name": "@testGETService",
+        "line": 2
+      }
+    ],
+    "uri": "test/features/testGETService.feature",
+    "elements": [
+      {
+        "id": "get-service;validate-the-get-posts-response.",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Validate the GET Posts response.",
+        "tags": [
+          {
+            "name": "@testGETService",
+            "line": 2
+          },
+          {
+            "name": "@getServicePosts",
+            "line": 6
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "test/features/support/hooks.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "a valid \"jsonplaceholder\" url",
+            "match": {
+              "location": "test/features/step_definitions/stepdefs.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            },
+            "embeddings": [
+              {
+                "data": "https://jsonplaceholder.typicode.com",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "i request \"posts\" endpoint",
+            "match": {
+              "location": "test/features/step_definitions/stepdefs.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 147000000
+            },
+            "embeddings": [
+              {
+                "data": "https://jsonplaceholder.typicode.com/posts",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "i should get \"200\" response status code",
+            "match": {
+              "location": "test/features/step_definitions/stepdefs.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "the \"POSTS\" schema should be proper",
+            "match": {
+              "location": "test/features/step_definitions/stepdefs.js:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "test/features/support/hooks.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "get-service;validate-the-get-posts-response-with-id.",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "Validate the GET Posts response with ID.",
+        "tags": [
+          {
+            "name": "@testGETService",
+            "line": 2
+          },
+          {
+            "name": "@getServicePostsWithID",
+            "line": 13
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "test/features/support/hooks.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "a valid \"jsonplaceholder\" url",
+            "match": {
+              "location": "test/features/step_definitions/stepdefs.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            },
+            "embeddings": [
+              {
+                "data": "https://jsonplaceholder.typicode.com",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "i request \"posts\" endpoint with \"1\" ID",
+            "match": {
+              "location": "test/features/step_definitions/stepdefs.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 142000000
+            },
+            "embeddings": [
+              {
+                "data": "https://jsonplaceholder.typicode.com/posts/1",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "i should get \"200\" response status code",
+            "match": {
+              "location": "test/features/step_definitions/stepdefs.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "the \"POSTS_WITH_ID\" schema should be proper",
+            "match": {
+              "location": "test/features/step_definitions/stepdefs.js:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "the response ID should be identical to request ID",
+            "match": {
+              "location": "test/features/step_definitions/stepdefs.js:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "the response should contain only one record",
+            "match": {
+              "location": "test/features/step_definitions/stepdefs.js:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "test/features/support/hooks.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "get-service;validate-the-get-posts-response-with-invalid-post.",
+        "keyword": "Scenario",
+        "line": 23,
+        "name": "Validate the GET Posts response with invalid post.",
+        "tags": [
+          {
+            "name": "@testGETService",
+            "line": 2
+          },
+          {
+            "name": "@getServicePostsInvalid",
+            "line": 22
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "test/features/support/hooks.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 24,
+            "name": "a valid \"jsonplaceholder\" url",
+            "match": {
+              "location": "test/features/step_definitions/stepdefs.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            },
+            "embeddings": [
+              {
+                "data": "https://jsonplaceholder.typicode.com",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "i request \"invalidposts\" endpoint",
+            "match": {
+              "location": "test/features/step_definitions/stepdefs.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 851000000
+            },
+            "embeddings": [
+              {
+                "data": "https://jsonplaceholder.typicode.com/invalidposts",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "i should get \"404\" response status code",
+            "match": {
+              "location": "test/features/step_definitions/stepdefs.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            },
+            "embeddings": [
+              {
+                "data": "✨ REQUEST ✨\n",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "Headers: {\"date\":\"Wed, 23 Sep 2020 03:27:04 GMT\",\"content-type\":\"application/json; charset=utf-8\",\"content-length\":\"2\",\"connection\":\"close\",\"set-cookie\":[\"__cfduid=dd684f4d4acb1174d8222906131f443b01600831624; expires=Fri, 23-Oct-20 03:27:04 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax\"],\"x-powered-by\":\"Express\",\"x-ratelimit-limit\":\"1000\",\"x-ratelimit-remaining\":\"998\",\"x-ratelimit-reset\":\"1600831639\",\"vary\":\"Origin, Accept-Encoding\",\"access-control-allow-credentials\":\"true\",\"cache-control\":\"max-age=43200\",\"pragma\":\"no-cache\",\"expires\":\"-1\",\"x-content-type-options\":\"nosniff\",\"etag\":\"W/\\\"2-vyGp6PvFo4RvsFtPoIWeCReyIC8\\\"\",\"via\":\"1.1 vegur\",\"cf-cache-status\":\"EXPIRED\",\"cf-request-id\":\"055a992b3f0000df361d86e200000001\",\"expect-ct\":\"max-age=604800, report-uri=\\\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\\\"\",\"server\":\"cloudflare\",\"cf-ray\":\"5d712af1fffbdf36-BOM\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "\n✨ RESPONSE ✨\n",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "Status: 404 Not Found",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "Body: {}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "test/features/support/hooks.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "    Validate the POST service endpoints.",
+    "keyword": "Feature",
+    "name": "POST service",
+    "line": 3,
+    "id": "post-service",
+    "tags": [
+      {
+        "name": "@testPOSTService",
+        "line": 2
+      }
+    ],
+    "uri": "test/features/testPOSTService.feature",
+    "elements": [
+      {
+        "id": "post-service;validate-the-post-response.",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Validate the POST response.",
+        "tags": [
+          {
+            "name": "@testPOSTService",
+            "line": 2
+          },
+          {
+            "name": "@postServiceWithStringBody",
+            "line": 6
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "test/features/support/hooks.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "a valid \"jsonplaceholder\" url",
+            "match": {
+              "location": "test/features/step_definitions/stepdefs.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            },
+            "embeddings": [
+              {
+                "data": "https://jsonplaceholder.typicode.com",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "i send POST request with \"posts\" endpoint and \"NEW_POST\" body",
+            "match": {
+              "location": "test/features/step_definitions/stepdefs.js:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 653000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "i should get \"201\" response status code",
+            "match": {
+              "location": "test/features/step_definitions/stepdefs.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            },
+            "embeddings": [
+              {
+                "data": "✨ REQUEST ✨\n",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "Headers: {\"date\":\"Wed, 23 Sep 2020 03:27:05 GMT\",\"content-type\":\"application/json; charset=utf-8\",\"content-length\":\"65\",\"connection\":\"close\",\"set-cookie\":[\"__cfduid=d5b15082ddc241e64414ff45a0697cad61600831624; expires=Fri, 23-Oct-20 03:27:04 GMT; path=/; domain=.typicode.com; HttpOnly; SameSite=Lax\"],\"x-powered-by\":\"Express\",\"x-ratelimit-limit\":\"1000\",\"x-ratelimit-remaining\":\"997\",\"x-ratelimit-reset\":\"1600831639\",\"vary\":\"Origin, X-HTTP-Method-Override, Accept-Encoding\",\"access-control-allow-credentials\":\"true\",\"cache-control\":\"no-cache\",\"pragma\":\"no-cache\",\"expires\":\"-1\",\"access-control-expose-headers\":\"Location\",\"location\":\"http://jsonplaceholder.typicode.com/posts/101\",\"x-content-type-options\":\"nosniff\",\"etag\":\"W/\\\"41-GDNaWfnVU6RZhpLbye0veBaqcHA\\\"\",\"via\":\"1.1 vegur\",\"cf-cache-status\":\"DYNAMIC\",\"cf-request-id\":\"055a992e950000e15ae2b9a200000001\",\"expect-ct\":\"max-age=604800, report-uri=\\\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\\\"\",\"server\":\"cloudflare\",\"cf-ray\":\"5d712af75957e15a-BOM\"}",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "\n✨ RESPONSE ✨\n",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "Status: 201 Created",
+                "mime_type": "text/plain"
+              },
+              {
+                "data": "Body: {\"title\":\"foo\",\"body\":\"bar\",\"userId\":1,\"id\":101}",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "the \"CREATE_NEW_POST\" schema should be proper",
+            "match": {
+              "location": "test/features/step_definitions/stepdefs.js:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "the response should contain valid ID",
+            "match": {
+              "location": "test/features/step_definitions/stepdefs.js:73"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            },
+            "embeddings": [
+              {
+                "data": "Created/Updated ID: 101",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "test/features/support/hooks.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "    Validate the PUT service endpoints.",
+    "keyword": "Feature",
+    "name": "PUT service",
+    "line": 3,
+    "id": "put-service",
+    "tags": [
+      {
+        "name": "@testPUTService",
+        "line": 2
+      }
+    ],
+    "uri": "test/features/testPUTService.feature",
+    "elements": [
+      {
+        "id": "put-service;validate-the-put-response.",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Validate the PUT response.",
+        "tags": [
+          {
+            "name": "@testPUTService",
+            "line": 2
+          },
+          {
+            "name": "@putServiceUpdatePost",
+            "line": 6
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "test/features/support/hooks.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "a valid \"jsonplaceholder\" url",
+            "match": {
+              "location": "test/features/step_definitions/stepdefs.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            },
+            "embeddings": [
+              {
+                "data": "https://jsonplaceholder.typicode.com",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "i update the \"posts\" endpoint with \"1\" ID and \"UPDATE_POST\" body",
+            "match": {
+              "location": "test/features/step_definitions/stepdefs.js:78"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 646000000
+            },
+            "embeddings": [
+              {
+                "data": "https://jsonplaceholder.typicode.com/posts/1",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "i should get \"200\" response status code",
+            "match": {
+              "location": "test/features/step_definitions/stepdefs.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "the \"UPDATE_POST\" schema should be proper",
+            "match": {
+              "location": "test/features/step_definitions/stepdefs.js:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "the response should contain valid ID",
+            "match": {
+              "location": "test/features/step_definitions/stepdefs.js:73"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            },
+            "embeddings": [
+              {
+                "data": "Created/Updated ID: 1",
+                "mime_type": "text/plain"
+              }
+            ]
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "test/features/support/hooks.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
