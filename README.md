@@ -4,7 +4,7 @@
 
 <img src="docs/images/emojis/india.svg" width="28" height="28">
 
-- [HTTP Status Codes](docs/http-status-code.md)
+- [HTTP Status Codes](https://github.com/jagadeeshshetty/rest-api-test-bdd/blob/doc/httpStatusCode/docs/images/http-status-code.md)
 
 ## Run
 
