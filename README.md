@@ -4,6 +4,8 @@
 
 <img src="docs/images/emojis/india.svg" width="28" height="28">
 
+- [HTTP Status Codes](docs/http-status-code.md)
+
 ## Run
 
 ### Install dependencies
